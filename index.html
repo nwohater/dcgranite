@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DC Marble & Granite Restoration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7f9;
+      color: #333;
+    }
+    .hero {
+      background: linear-gradient(135deg, #343a40, #495057);
+      color: #fff;
+      padding: 60px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+      text-align: center;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    .service-item {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    .service-item:hover {
+      background: #e9ecef;
+    }
+    footer {
+      background: #343a40;
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero" data-aos="fade-down">
+    <div class="container">
+      <h1 class="display-5">DC Marble & Granite Restoration</h1>
+      <p class="lead">DC Marble & Granite has built its reputation on 100% customer satisfaction</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section bg-light" data-aos="fade-up">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        We are a full service natural stone company that takes pride in Restoring, Protecting and Maintaining your substantial investment that you have made in your natural stone. Whether it is Flooring, Counter-tops, Walls or even Exterior stone surfaces, it should be professionally cared for and maintained to prolong its beauty and durability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-item"><i class="bi bi-bucket-fill"></i><br>Cleaning</div>
+        <div class="service-item"><i class="bi bi-star-fill"></i><br>Polishing</div>
+        <div class="service-item"><i class="bi bi-tools"></i><br>Repairs</div>
+        <div class="service-item"><i class="bi bi-border-width"></i><br>Lippage Removal</div>
+        <div class="service-item"><i class="bi bi-gem"></i><br>Honing</div>
+        <div class="service-item"><i class="bi bi-shield-check"></i><br>Sealing</div>
+        <div class="service-item"><i class="bi bi-droplet-half"></i><br>Color Enhancing</div>
+        <div class="service-item"><i class="bi bi-hammer"></i><br>Installation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section bg-light" data-aos="fade-up">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="row g-3 gallery" id="gallery-container">
+        <!-- Placeholder images inserted by script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="fs-5">Call Now For A FREE Estimate!</p>
+      <p><strong>Phone:</strong>909-821-2670</p>
+      <p><strong>Email:</strong> <a href="mailto:don@dcmarbleandgranite.com">don@dcmarbleandgranite.com</a></p>
+      <p><strong>Instagram:</strong> <a href="#">@instagram_handle</a></p>
+      <p><em>Licensed. Bonded. Fully Insured.</em></p>
+    </div>
+  </section>
+
+  <footer class="text-center py-4">
+    <small>&copy; DC Marble & Granite Restoration. All rights reserved.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  AOS.init();
+
+  (function insertGalleryImages() {
+    const galleryContainer = document.getElementById('gallery-container');
+    if (!galleryContainer) return;
+    for (let i = 1; i <= 28; i++) {
+      const col = document.createElement('div');
+      col.className = 'col-sm-6 col-md-4 col-lg-3';
+      col.innerHTML = `
+        <a href="tinyimages/${i}.webp" class="glightbox" data-gallery="gallery">
+          <img src="thumbs/${i}.webp" class="img-fluid rounded shadow-sm" alt="Gallery Image ${i}">
+        </a>`;
+      galleryContainer.appendChild(col);
+    }
+  })();
+  const lightbox = GLightbox({ selector: '.glightbox' });
+</script>
+</body>
+</html>
