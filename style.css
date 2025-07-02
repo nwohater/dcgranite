@@ -33,7 +33,11 @@ h2 {
 }
 
 .hero {
-  background: linear-gradient(135deg, #343a40, #495057);
+  background: 
+    url('https://www.transparenttextures.com/patterns/white-marble.png'),
+    linear-gradient(135deg, #343a4099, #49505799);
+  background-size: auto, cover;
+  background-blend-mode: overlay;
   color: #fff;
   padding: 80px 24px 64px 24px;
   border-radius: 0 0 32px 32px;
