@@ -33,24 +33,12 @@ h2 {
 }
 
 .hero {
-  background: 
-    url('https://www.transparenttextures.com/patterns/granite.png'),
-    linear-gradient(135deg, #343a4099, #49505799);
-  background-size: auto, cover;
-  background-blend-mode: overlay;
+  background: linear-gradient(135deg, #343a40, #495057);
   color: #fff;
   padding: 80px 24px 64px 24px;
   border-radius: 0 0 32px 32px;
   box-shadow: 0 8px 32px rgba(44,62,80,0.10);
   margin-bottom: 40px;
-  position: relative;
-}
-.hero::before {
-  content: none;
-}
-.hero > .container, .hero h1, .hero p.lead {
-  position: relative;
-  z-index: 1;
 }
 .hero h1 {
   font-size: 3rem;
