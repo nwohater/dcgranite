@@ -33,16 +33,25 @@ h2 {
 }
 
 .hero {
-  background: 
-    url('https://www.transparenttextures.com/patterns/white-marble.png'),
-    linear-gradient(135deg, #343a4099, #49505799);
-  background-size: auto, cover;
-  background-blend-mode: overlay;
-  color: #fff;
+  background: url('https://images.pexels.com/photos/4666755/pexels-photo-4666755.jpeg?auto=compress&w=1200&q=80') center center/cover no-repeat;
+  color: #343a40;
   padding: 80px 24px 64px 24px;
   border-radius: 0 0 32px 32px;
   box-shadow: 0 8px 32px rgba(44,62,80,0.10);
   margin-bottom: 40px;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.7);
+  border-radius: 0 0 32px 32px;
+  z-index: 0;
+}
+.hero > .container, .hero h1, .hero p.lead {
+  position: relative;
+  z-index: 1;
 }
 .hero h1 {
   font-size: 3rem;
