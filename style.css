@@ -33,8 +33,12 @@ h2 {
 }
 
 .hero {
-  background: url('https://images.pexels.com/photos/4666755/pexels-photo-4666755.jpeg?auto=compress&w=1200&q=80') center center/cover no-repeat;
-  color: #343a40;
+  background: 
+    url('https://www.transparenttextures.com/patterns/granite.png'),
+    linear-gradient(135deg, #343a4099, #49505799);
+  background-size: auto, cover;
+  background-blend-mode: overlay;
+  color: #fff;
   padding: 80px 24px 64px 24px;
   border-radius: 0 0 32px 32px;
   box-shadow: 0 8px 32px rgba(44,62,80,0.10);
@@ -42,12 +46,7 @@ h2 {
   position: relative;
 }
 .hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.7);
-  border-radius: 0 0 32px 32px;
-  z-index: 0;
+  content: none;
 }
 .hero > .container, .hero h1, .hero p.lead {
   position: relative;
